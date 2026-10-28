@@ -13,3 +13,7 @@ steering into them: **B** boosts speed for five seconds, **+** grants an extra
 life (up to three), and **S** blocks one crash. Avoid traffic to stay in the
 race; Back exits after a multiplayer round. Local Wi-Fi discovery must be
 allowed by the network. The best score is saved on each badge.
+
+## Screenshot
+
+![Pocket Racer gameplay in the Badge Simulator](assets/screenshot.png)
