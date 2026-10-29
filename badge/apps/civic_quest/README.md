@@ -33,3 +33,32 @@ progress** on the title screen to clear saved progress.
 ## Requirements
 
 Universe 2026 badge firmware. No Wi-Fi, touch or badge link is needed.
+
+## Fork and run
+
+The complete source is published at https://github.com/octobooth-12/home,
+with Civic Quest on the default `civic-quest` branch. Fork that repository on
+GitHub, then clone your fork. Keep the full repository so the badge runtime
+references, simulator extension, deployment scripts and tests remain available.
+
+From the repository root in PowerShell, with Python 3.10 or later:
+
+```powershell
+python -m unittest tests.test_civic_quest tests.test_system
+python .github\skills\hyb26-skill\scripts\validate_app.py badge\apps\civic_quest
+```
+
+In the GitHub Copilot app, open the Badge Simulator for `civic_quest` to try
+the game on your computer. The simulator extension is in
+`.github/extensions/badge-simulator/`; follow its README for setup.
+
+This app is Python source: no compilation or firmware build is required when
+using compatible Universe 2026 firmware. For a physical badge, follow
+`hardware/USB_SERIAL.md`. In USB Disk Mode, preview the files before deploying:
+
+```powershell
+python .github\skills\hyb26-skill\scripts\deploy_app.py badge\apps\civic_quest
+```
+
+Review the preview, then add `--write` to install. If updating an existing
+installation, use `--replace` as well; the script keeps a backup.
