@@ -2,6 +2,8 @@
 
 Radio Stats shows anonymous counts of nearby Wi-Fi access points from passive scans.
 
+![Radio Stats startup in the simulator at 320x240](assets/radio_stats_startup.png)
+
 ## Usage
 
 Open **Radio Stats** from the badge menu. Select takes a single passive
@@ -73,8 +75,11 @@ python -m unittest discover -s tests -p test_radio_stats.py
 
 Host tests use synthetic metadata, not real network identifiers, and exercise
 radio ownership, mandatory passive mode, errors, cleanup, aggregation and UI.
-They do not prove radio behavior. The simulator does not implement Wi-Fi
-scanning and should show the unavailable card, not fabricated measurements.
+They do not prove radio behavior. Simulator startup, Select, and the
+**Wi-Fi already in use** refusal card were checked at 320x240 with no crash.
+The simulator does not prove Wi-Fi scanning; its networking shim can report
+an active interface instead of an unavailable API. No simulated measurements
+are presented as real observations.
 
 On a physical badge, verify: the custom menu icon; startup without scanning;
 Select's listening card then a snapshot; both pages and empty results;
