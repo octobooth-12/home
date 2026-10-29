@@ -23,7 +23,7 @@ to the step counter. This is a playful visual, not a medical assessment.
 | Screen | Controls |
 | --- | --- |
 | Height setup | UP/DOWN: change height by 1 cm (100-220 cm); SELECT: next |
-| Reminder setup | UP/DOWN: change interval by 100 steps (100-5,000); BACK: height; SELECT: save |
+| Reminder setup | UP/DOWN: change interval by 10 steps (100-5,000); BACK: height; SELECT: save |
 | Step counter | BACK: settings; HOME: badge menu |
 | Hydration reminder | SELECT: log a drink and reset water; BACK: skip |
 

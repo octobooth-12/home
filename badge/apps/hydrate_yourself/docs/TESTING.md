@@ -25,6 +25,8 @@ simulator runtime may clear its virtual filesystem.
 | Check | Expected result |
 | --- | --- |
 | First launch | Height setup appears, followed by reminder interval setup |
+| One UP, then DOWN in height setup | Height changes by +1 cm, then -1 cm |
+| One UP, then DOWN in reminder setup | Interval changes by +10 steps, then -10 steps |
 | UP/DOWN at limits | Height stays within 100-220 cm; interval within 100-5,000 |
 | SELECT and BACK in setup | Values can be edited, saved, and reopened |
 | Normal reload after save | Settings, steps, skips, and history are restored |

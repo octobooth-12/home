@@ -324,7 +324,9 @@ def draw_setup(height_screen):
     draw_text(value, (screen.width - width) // 2, 112, ACCENT)
     screen.font = font.nope
 
-    draw_text("UP / DOWN to change", 92, 161, MUTED)
+    hint = "UP / DOWN: 1 cm" if height_screen else "UP / DOWN: 10 steps"
+    width = screen.measure_text(hint)[0]
+    draw_text(hint, (screen.width - width) // 2, 161, MUTED)
     if height_screen:
         draw_text("SELECT: next", 119, 181, TEXT)
     else:
@@ -378,11 +380,11 @@ def update():
         else:
             if badge.pressed(BUTTON_UP):
                 setup_hydration_interval = min(
-                    MAX_HYDRATION_INTERVAL, setup_hydration_interval + 100
+                    MAX_HYDRATION_INTERVAL, setup_hydration_interval + 10
                 )
             elif badge.pressed(BUTTON_DOWN):
                 setup_hydration_interval = max(
-                    MIN_HYDRATION_INTERVAL, setup_hydration_interval - 100
+                    MIN_HYDRATION_INTERVAL, setup_hydration_interval - 10
                 )
             if badge.pressed(BUTTON_BACK):
                 setup_page = 1
